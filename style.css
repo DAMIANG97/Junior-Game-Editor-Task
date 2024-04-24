@@ -2,15 +2,18 @@ body {
   background-color: #008000;
   margin: 0rem;
 }
+
 header {
   background-color: #808000;
   border-bottom: 0.25rem black solid;
   height: 6vh;
 }
+
 main {
   display: flex;
   flex-direction: column;
 }
+
 .square-section {
   height: 26vh;
   width: fit-content;
@@ -21,6 +24,7 @@ main {
   margin-bottom: 6.5vh;
   margin-top: 2rem;
 }
+
 .square-section__square {
   background-color: #ff0000;
   width: calc(min(30vw, 13vh));
@@ -38,11 +42,13 @@ main {
 .equal-section {
   display: flex;
 }
+
 .equal-section__rectangles {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+
 .equal-section__rectangle {
   background-color: blue;
   height: 1vh;
@@ -51,10 +57,12 @@ main {
   display: flex;
   margin-left: 5.5vw;
 }
+
 .equal-section__rectangle--second {
   margin-left: 5vw;
   margin-top: 3.25vh;
 }
+
 .equal-section__circle {
   aspect-ratio: 10/9;
   height: 9vh;
@@ -64,6 +72,7 @@ main {
   margin-left: 10vw;
   margin-bottom: 1.25vh;
 }
+
 .rectangle {
   background-color: blue;
   height: 43vh;
@@ -73,6 +82,7 @@ main {
   justify-content: center;
   margin-left: 16.5vw;
 }
+
 .rectangle__description {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 3.5rem;
@@ -84,11 +94,13 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+
   .square-section {
     margin-top: 15vh;
     grid-column: 1;
     grid-row: 1;
   }
+
   .square-section__square {
     width: calc(min(17vw, 21vh));
     height: calc(min(17vw, 21vh));
@@ -97,27 +109,30 @@ main {
   .square-section__square--second {
     margin-left: 7.5vw;
   }
+
   .equal-section {
     align-self: end;
     grid-column: 1;
     grid-row: 1;
     margin-bottom: 10vh;
   }
-  .equal-section__rectangles {
-  }
+
   .equal-section__rectangle {
     height: 2vh;
     width: 17vw;
     margin-left: 2vw;
   }
+
   .equal-section__rectangle--second {
     margin-left: 1.5vw;
   }
+
   .equal-section__circle {
     aspect-ratio: 10/9;
     height: 12vh;
     margin-left: 6vw;
   }
+
   .rectangle {
     grid-row: 1 / 2;
     grid-column: 2;
@@ -128,9 +143,55 @@ main {
     margin-bottom: 5vh;
     margin-left: 13vw;
   }
+
   .rectangle__description {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     font-size: 2.5rem;
-    font-weight: 400;
+  }
+}
+
+@media (min-width: 900px) {
+  main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .square-section {
+    margin-left: 1vw;
+  }
+
+  .square-section__square {
+    width: calc(min(11vw, 21vh));
+    height: calc(min(11vw, 21vh));
+  }
+
+  .square-section__square--second {
+    margin-left: 7.5vw;
+  }
+
+  .equal-section {
+    align-self: start;
+    margin-top: 18vh;
+    margin-left: 9vw;
+    margin-right: 9vw;
+  }
+
+  .equal-section__rectangle {
+    height: 2vh;
+    width: 11vw;
+  }
+
+  .equal-section__circle {
+    aspect-ratio: 10/9;
+    height: 10vw;
+    margin-left: 3vw;
+  }
+
+  .rectangle {
+    align-self: center;
+    background-color: white;
+    width: 18vw;
+    margin-right: 2vw;
+    margin-left: 0;
   }
 }
