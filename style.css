@@ -1,12 +1,11 @@
 body {
   background-color: #008000;
   margin: 0rem;
-  border: black solid 0.25rem;
 }
 header {
   background-color: #808000;
   border-bottom: 0.25rem black solid;
-  height: 5rem;
+  height: 6vh;
 }
 main {
   display: flex;
@@ -78,4 +77,60 @@ main {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 3.5rem;
   font-weight: 400;
+}
+
+@media (min-width: 583px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .square-section {
+    margin-top: 15vh;
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .square-section__square {
+    width: calc(min(17vw, 21vh));
+    height: calc(min(17vw, 21vh));
+  }
+
+  .square-section__square--second {
+    margin-left: 7.5vw;
+  }
+  .equal-section {
+    align-self: end;
+    grid-column: 1;
+    grid-row: 1;
+    margin-bottom: 10vh;
+  }
+  .equal-section__rectangles {
+  }
+  .equal-section__rectangle {
+    height: 2vh;
+    width: 17vw;
+    margin-left: 2vw;
+  }
+  .equal-section__rectangle--second {
+    margin-left: 1.5vw;
+  }
+  .equal-section__circle {
+    aspect-ratio: 10/9;
+    height: 12vh;
+    margin-left: 6vw;
+  }
+  .rectangle {
+    grid-row: 1 / 2;
+    grid-column: 2;
+    background-color: #c83737;
+    height: 74vh;
+    width: 28vw;
+    margin-top: 9.5vh;
+    margin-bottom: 5vh;
+    margin-left: 13vw;
+  }
+  .rectangle__description {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+  }
 }
